@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 mt-3">
+    <article>
+      <h1>
+        <%= @article.title %>
+        <small>
+          <%= link_to edit_article_path(@article) do %>
+            <i class="fa fa-pencil"></i>
+          <% end %>
+          <%= link_to articles_path,
+              method: :delete,
+              data: { confirm: 'Are you sure?'} do %>
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <% end %>
+        </small>
+      </h1>
+      <hr>
+      <p> <%= @article.content %></p>
+    </article>
+  </div>
+</div>
+
+
+
+

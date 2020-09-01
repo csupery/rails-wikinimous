@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-2 ml-auto mt-3">
+    <% @articles.each do |article| %>
+      <article>
+        <h2> <%= link_to article.title, article_path(article) %> </h2>
+        <p> <%= article.content %> </p>
+      </article>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+
+
+
